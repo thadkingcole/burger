@@ -1,5 +1,6 @@
 # Eat-Da-Burger!
 
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/c2e9128d01694ae48b58fc651be99b5d)](https://www.codacy.com/manual/thadkingcole/burger?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=thadkingcole/burger&amp;utm_campaign=Badge_Grade)
 ![GitHub top language](https://img.shields.io/github/languages/top/thadkingcole/burger)
 [![GitHub license](https://img.shields.io/github/license/thadkingcole/burger)](LICENSE)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](code_of_conduct.md)
