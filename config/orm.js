@@ -3,13 +3,13 @@ const connection = require("./connection");
 
 // * orm object creation
 const orm = {
-  selectAll: function () {
+  selectAll() {
     // TODO: develop selectAll() function
   },
-  insertOne: function () {
+  insertOne() {
     // TODO: develop insertOne() function
   },
-  updateOne: function () {
+  updateOne() {
     // TODO: develop updateOne() function
   },
 };
