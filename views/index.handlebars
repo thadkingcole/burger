@@ -1,3 +1,13 @@
-<h1>TODO: create template</h1>
-{{!-- TODO create button that will submit user input into the database --}}
-<button>button text</button>
+<h2>Burgers ready to be devoured!</h2>
+<ul>
+  {{#each burgers}}
+  {{#unless devoured}}
+  <li>
+    {{burger_name}}
+    <button>Devour it!</button>
+  </li>
+  {{/unless}}
+  {{/each}}
+</ul>
+<input>
+<button>Submit</button>

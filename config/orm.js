@@ -3,8 +3,12 @@ const connection = require("./connection");
 
 // * orm object creation
 const orm = {
-  selectAll() {
-    // TODO: develop selectAll() function
+  selectAll(tableIn, cb) {
+    const queryStr = `SELECT * FROM ${tableIn};`;
+    connection.query(queryStr, (err, result) => {
+      if (err) throw err;
+      cb(result);
+    });
   },
   insertOne() {
     // TODO: develop insertOne() function
