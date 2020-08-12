@@ -5,14 +5,20 @@ const connection = require("./connection");
 const orm = {
   selectAll(cb) {
     // only 1 table exists to select from
-    const queryStr = `SELECT * FROM burgers`;
+    const queryStr = "SELECT * FROM burgers";
     connection.query(queryStr, (err, result) => {
       if (err) throw err;
       cb(result);
     });
   },
-  insertOne() {
-    // TODO: develop insertOne() function
+  // TODO: develop insertOne() function
+  insertOne(burgerIn, cb) {
+    // burgerIn is object with keys corresponding to burgers table column names
+    const queryStr = "INSERT INTO burgers SET ?";
+    connection.query(queryStr, burgerIn, (err, result) => {
+      if (err) throw err;
+      cb(result);
+    });
   },
   updateOne() {
     // TODO: develop updateOne() function
