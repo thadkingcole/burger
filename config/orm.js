@@ -1,7 +1,7 @@
 // * required modules
 const connection = require("./connection");
 
-// * orm object creation
+// * ORM object creation
 const orm = {
   selectAll(cb) {
     // only 1 table exists to select from

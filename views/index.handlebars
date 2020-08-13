@@ -2,7 +2,7 @@
 <ul class="col-12 col-sm list-unstyled">
   {{#each burgers}}
     {{#unless devoured}}
-      <li class="my-1 text-left text-sm-right lead font-weight-bold">
+      <li class="my-1 text-left text-sm-right lead font-weight-bold" data-id="{{id}}">
         {{burger_name}}
         <button class="btn btn-danger devour-it">Devour it!</button>
       </li>
