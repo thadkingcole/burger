@@ -5,23 +5,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Eat-Da-Burger!</title>
+  {{!-- Bootstrap CSS --}}
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+  {{!-- Custom CSS --}}
   <link rel="stylesheet" href="/assets/css/burger_style.css">
 </head>
 
 <body>
-  {{!-- header & burger image --}}
-  <h1>Eat-da-Burger!</h1>
-  <img src="/assets/img/burger.png" alt="burger pic">
+  <div class="container">
+    {{!-- header & burger image --}}
+    <header class="row">
+      <div class="col text-center">
+        <img src="/assets/img/burger.png" alt="burger image">
+        <h1>Eat-Da-Burger!</h1>
+      </div>
+    </header>
 
-  {{!-- list of burgers, ready to eat and devoured --}}
-  {{{body}}}
+    {{!-- list of burgers, ready to eat and devoured -- from ../index.handlebars --}}
+    {{{body}}}
 
-  {{!-- field to enter new burgers --}}
-  <p>
-    Enter a burger you would like to devour:
-    <input>
-    <button>Submit</button>
-  </p>
+    {{!-- form to enter new burgers --}}
+    <footer class="row">
+      <form class="col col-sm-7 col-md-6 col-lg-5 col-xl-4 text-center mx-auto">
+        <label for="ready-to-eat-burger">Enter a burger you would like to eat:</label>
+        <div class="input-group">
+          <input type="text" class="form-control" id="ready-to-eat-burger" autofocus required />
+          <div class="input-group-append">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </div>
+      </form>
+    </footer>
+  </div>
+
+  <!-- JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
