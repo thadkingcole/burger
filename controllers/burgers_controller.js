@@ -17,7 +17,7 @@ router.get("*", (req, res) => {
 // add a burger to the database
 router.post("/api/burgers", (req, res) => {
   burger.create(req.body, (result) => {
-    console.log("added burger", result.insertId);
+    console.log("added burger", result.insertId, req.body);
     // send back ID of new burger
     res.json({ id: result.insertId });
   });
