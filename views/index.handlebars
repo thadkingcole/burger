@@ -9,6 +9,14 @@
     {{/unless}}
   {{/each}}
 </ul>
+<h2>Devoured burgers</h2>
+<ul>
+  {{#each burgers}}
+    {{#if devoured}}
+      <li>{{burger_name}}</li>
+    {{/if}}
+  {{/each}}
+</ul>
 <p>
   Enter a burger you would like to devour:
   <input>
