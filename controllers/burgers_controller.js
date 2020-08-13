@@ -23,5 +23,13 @@ router.post("/api/burgers", (req, res) => {
   });
 });
 
+router.put("/api/burgers/:id", (req, res) => {
+  burger.update({ id: req.params.id }, (result) => {
+    // if no rows changed, burger id not found
+    if (result.changedRows === 0) return res.status(404).end();
+    res.status(200).end();
+  });
+});
+
 // * export this module
 module.exports = router;

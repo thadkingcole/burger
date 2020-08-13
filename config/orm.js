@@ -11,17 +11,23 @@ const orm = {
       cb(result);
     });
   },
-  // TODO: develop insertOne() function
   insertOne(burgerIn, cb) {
-    // burgerIn is object with keys corresponding to burgers table column names
+    // INSERT INTO burgers SET burger_name = "user entered burger"
     const queryStr = "INSERT INTO burgers SET ?";
+    // burgerIn = { burger_name = "user entered burger" }
     connection.query(queryStr, burgerIn, (err, result) => {
       if (err) throw err;
       cb(result);
     });
   },
-  updateOne() {
-    // TODO: develop updateOne() function
+  updateOne(devourId, cb) {
+    // UPDATE burgers SET devoured = true WHERE id = INT(id of devoured burger)
+    const queryStr = "UPDATE burgers SET devoured = TRUE WHERE ?";
+    // devourId is the id number of the burger the user has decided to devour
+    connection.query(queryStr, devourId, (err, result) => {
+      if (err) throw err;
+      cb(result);
+    });
   },
 };
 

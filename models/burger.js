@@ -8,9 +8,15 @@ const burger = {
       cb(res);
     });
   },
-  // burgerIn is object with keys corresponding to burgers table column names
+  // burgerIn = { burger_name = "user entered burger" }
   create: (burgerIn, cb) => {
     orm.insertOne(burgerIn, (res) => {
+      cb(res);
+    });
+  },
+  // devourId is the id number of the burger the user has decided to devour
+  update: (devourId, cb) => {
+    orm.updateOne(devourId, (res) => {
       cb(res);
     });
   },
