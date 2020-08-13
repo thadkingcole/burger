@@ -1,19 +1,20 @@
-<h2>Burgers ready to be devoured!</h2>
-<ul>
+{{!-- burgers ready to be eaten --}}
+<ul class="col-12 col-sm list-unstyled">
   {{#each burgers}}
     {{#unless devoured}}
-      <li>
+      <li class="my-1 text-left text-sm-right lead font-weight-bold">
         {{burger_name}}
-        <button>Devour it!</button>
+        <button class="btn btn-danger">Devour it!</button>
       </li>
     {{/unless}}
   {{/each}}
 </ul>
-<h2>Devoured burgers</h2>
-<ul>
+
+{{!-- devoured burgers --}}
+<ul class="col-12 col-sm list-unstyled">
   {{#each burgers}}
     {{#if devoured}}
-      <li>{{burger_name}}</li>
+      <li class="text-muted text-right text-sm-left font-weight-light">{{burger_name}}</li>
     {{/if}}
   {{/each}}
 </ul>

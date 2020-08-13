@@ -15,6 +15,7 @@
 
 <body>
   <div class="container">
+
     {{!-- header & burger image --}}
     <header class="row">
       <div class="col text-center">
@@ -24,7 +25,9 @@
     </header>
 
     {{!-- list of burgers, ready to eat and devoured -- from ../index.handlebars --}}
-    {{{body}}}
+    <main class="row">
+      {{{body}}}
+    </main>
 
     {{!-- form to enter new burgers --}}
     <footer class="row">
@@ -40,7 +43,7 @@
     </footer>
   </div>
 
-  <!-- JS, Popper.js, and jQuery -->
+  {{!-- JS, Popper.js, and jQuery --}}
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"></script>
@@ -50,6 +53,9 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
     crossorigin="anonymous"></script>
+
+  {{!-- front end JS --}}
+  <script src="/assets/js/eatingBurgers.js"></script>
 </body>
 
 </html>
