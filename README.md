@@ -7,7 +7,7 @@
 
 A [burger logger](https://blooming-springs-66599.herokuapp.com/) with MySQL, Node, Express, Handlebars and a homemade ORM.
 
-[![app screenshot](public/assets/img/screenshot.png)](https://blooming-springs-66599.herokuapp.com/)
+[![app screenshot](public/images/screenshot.png)](https://blooming-springs-66599.herokuapp.com/)
 
 ## Table of Contents
 

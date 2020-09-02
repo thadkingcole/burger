@@ -1,5 +1,4 @@
 // * required modules
-require("dotenv").config(); // use environment variables
 const mysql = require("mysql");
 let connection;
 
